@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Atul Kshirsagar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#team {
+    background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007b5e;
+    border-color: #007b5e;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    /* -moz-transform: perspective(1000px); */
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    /* -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg); */
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="images" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Images</a>
+    <a href="videos" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Videos</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:60px 10px">
+  <h1 class="w3-margin w3-jumbo">START PAGE</h1>
+  <p class="w3-xlarge">AWS Using Nodejs</p>
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
+</header>
+
+<!-- Cards -->
+<section id="team" class="pb-5">
+  <div class="container">
+      <h5 class="section-title h1">AWS EC2</h5>
+      <div class="row">
+          <!-- card -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip" >
+                  <div class="mainflip flip-0">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center"><br><br><br><br>
+                                <!-- <p><img class=" img-fluid" src="/pictures/1.png"></p> -->
+                                  <h4 class="card-title">Launch EC2 Instance</h4>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title">Launch EC2 Instance</h4>
+                                  <p class="card-text">EC2 instance is a virtual server in Amazon's Elastic Compute Cloud (EC2) for running applications on the Amazon Web Services (AWS) infrastructure.</p>
+                                  <ul class="list-inline">
+                                      <li class="list-inline-item">
+                                          <a href="launchinstance">Launch Instance</a>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./card -->
+         <!-- card -->
+         <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" >
+                <div class="mainflip flip-0">
+                    <div class="frontside">
+                        <div class="card">
+                            <div class="card-body text-center"><br><br><br><br>
+                              <!-- <p><img class=" img-fluid" src="/pictures/1.png"></p> -->
+                                <h4 class="card-title">List All EC2 Instances</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="backside">
+                        <div class="card">
+                            <div class="card-body text-center mt-4">
+                                <h4 class="card-title">List All EC2 Instances</h4>
+                                <p class="card-text">You can list all the EC2 Instances which are running/stopped in your aws account.</p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="listinstances">List all Instances</a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./card -->
+         <!-- card -->
+         <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" >
+                <div class="mainflip flip-0">
+                    <div class="frontside">
+                        <div class="card">
+                            <div class="card-body text-center"><br><br><br><br>
+                              <!-- <p><img class=" img-fluid" src="/pictures/1.png"></p> -->
+                                <h4 class="card-title">List Specific Instance</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="backside">
+                        <div class="card">
+                            <div class="card-body text-center mt-4">
+                                <h4 class="card-title">List Specific Instance</h4>
+                                <p class="card-text">You can list specific EC2 Instance which are running in your aws account.</p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="listSpecificInstance">List Instance</a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./card -->
+          <!-- card -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" >
+                <div class="mainflip flip-0">
+                    <div class="frontside">
+                        <div class="card">
+                            <div class="card-body text-center"><br><br><br><br>
+                              <!-- <p><img class=" img-fluid" src="/pictures/1.png"></p> -->
+                                <h4 class="card-title">Stop All EC2 Instances</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="backside">
+                        <div class="card">
+                            <div class="card-body text-center mt-4">
+                                <h4 class="card-title">Stop All EC2 Instances</h4>
+                                <p class="card-text">The EC2 “stopped” state indicates that an instance is shut down and cannot be used. Basically, it is a temporary shutdown for when you are not using an instance, but you will need it later.</p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="stopinstances">Stop All Instances</a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./card -->
+           <!-- card -->
+           <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" >
+                <div class="mainflip flip-0">
+                    <div class="frontside">
+                        <div class="card">
+                            <div class="card-body text-center"><br><br><br><br>
+                              <!-- <p><img class=" img-fluid" src="/pictures/1.png"></p> -->
+                                <h4 class="card-title">Stop Specific Instance</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="backside">
+                        <div class="card">
+                            <div class="card-body text-center mt-4">
+                                <h4 class="card-title">Stop Specific Instance</h4>
+                                <p class="card-text">When you stop an instance, the data on any instance store volumes is erased. Before you stop an instance, verify that you've copied any data that you need from your instance store volumes to persistent storage, such as Amazon EBS or Amazon S3.</p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="StopSpecificInstance">Stop Specific Instance</a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./card -->
+        <!-- card -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" >
+                <div class="mainflip flip-0">
+                    <div class="frontside">
+                        <div class="card">
+                            <div class="card-body text-center"><br><br><br><br>
+                              <!-- <p><img class=" img-fluid" src="/pictures/1.png"></p> -->
+                                <h4 class="card-title">Terminate All EC2 Instances</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="backside">
+                        <div class="card">
+                            <div class="card-body text-center mt-4">
+                                <h4 class="card-title">Terminate All EC2 Instances</h4>
+                                <p class="card-text">When you terminate an EC2 instance, the instance will be shutdown and the virtual machine that was provisioned for you will be permanently taken away and you will no longer be charged for instance usage. Any data that was stored locally on the instance will be lost.</p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="terminateinstances">Terminate All Instances</a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./card -->
+         <!-- card -->
+         <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" >
+                <div class="mainflip flip-0">
+                    <div class="frontside">
+                        <div class="card">
+                            <div class="card-body text-center"><br><br><br><br>
+                              <!-- <p><img class=" img-fluid" src="/pictures/1.png"></p> -->
+                                <h4 class="card-title">Terminate Specific Instance</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="backside">
+                        <div class="card">
+                            <div class="card-body text-center mt-4">
+                                <h4 class="card-title">Terminate Specific Instance</h4>
+                                <p class="card-text">You can delete your instance when you no longer need it. This is referred to as terminating your instance. As soon as the state of an instance changes to shutting-down or terminated , you stop incurring charges for that instance.</p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="TerminateSpecificInstance">Terminate Specific Instance</a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./card -->
+        <!-- card -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" >
+                <div class="mainflip flip-0">
+                    <div class="frontside">
+                        <div class="card">
+                            <div class="card-body text-center"><br><br><br><br>
+                              <!-- <p><img class=" img-fluid" src="/pictures/1.png"></p> -->
+                                <h4 class="card-title">Start All EC2 Instances</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="backside">
+                        <div class="card">
+                            <div class="card-body text-center mt-4">
+                                <h4 class="card-title">Start All EC2 Instances</h4>
+                                <p class="card-text">You can start all EC2 Instances which were stopped in your aws account.</p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="startinstances">Start All Instances</a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./card -->
+        <!-- card -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" >
+                <div class="mainflip flip-0">
+                    <div class="frontside">
+                        <div class="card">
+                            <div class="card-body text-center"><br><br><br><br>
+                              <!-- <p><img class=" img-fluid" src="/pictures/1.png"></p> -->
+                                <h4 class="card-title">Start Specific Instance</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="backside">
+                        <div class="card">
+                            <div class="card-body text-center mt-4">
+                                <h4 class="card-title">Start Specific Instance</h4>
+                                <p class="card-text">You can start specific EC2 Instance which was stopped in your aws account.</p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="StartSpecificInstance">Start Specific Instance</a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./card -->
+      </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <!-- <i class="fa fa-pinterest-p w3-hover-opacity"></i> -->
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <a href="https://www.linkedin.com/in/atul-kshirsagar-b73548151/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+ </div>
+</footer>
+
+</body>
+</html>
